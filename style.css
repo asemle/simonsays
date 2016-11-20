@@ -1,0 +1,11 @@
+.canvas{background-color: black;
+        width: 500px;
+        height:500px;}
+.red{background-color: red;}
+.blue{background-color: blue;}
+.green{background-color: green;}
+.yellow{background-color: yellow;}
+.black{background-color: black;}
+
+.box{width: 250px;height: 250px;
+float: left;}
