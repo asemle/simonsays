@@ -24,6 +24,7 @@ $(document).ready(function(){
              //end interval sets flag equal true for inputs
              if(count >= 3){
                  flag = true;
+                 answerArray.reverse();//to work with count and terminate on error
                  clearInterval(interval);
             }
              count++;
@@ -34,25 +35,22 @@ $(document).ready(function(){
      // if(flag) {
        $(".box").click(function(){
            if(flag){
-
              inputs($(this));
            }
        });
 
      function inputs(that) {
-       
+
        $(that).addClass('black');
-       console.log(count);
-        // console.log(that['0'].className);//typeof = string
          setTimeout(function() {
              $(that).removeClass('black');
          }, 200);
         var user = that['0'].className;
-        console.log(user);
-        if(user.includes('red'))userInput.push('red');
-        else if(user.includes('green'))userInput.push('green');
-        else if(user.includes('blue'))userInput.push('blue');
-        else userInput.push('yellow');
+        var answer = answerArray.pop();
+        if(user.includes('red')&& 'red'===answer)userInput.push('red');
+        else if(user.includes('green')&& 'green'===answer)userInput.push('green');
+        else if(user.includes('blue')&& 'blue'===answer)userInput.push('blue');
+        else if(user.includes('yellow') && 'yellow'===answer)userInput.push('yellow');
         //  userInput.push();
          count--;
          if (count === 0) {
