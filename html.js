@@ -1,13 +1,14 @@
 
 $(document).ready(function(){
   var flagger = true;
-
+     var score = 0;
      var answerArray = [];
      var userInput = [];
      var flag = false;
      var colors = ['red', 'green', 'blue', 'yellow'];
      var count = 0;
      var level = 3;
+
      $('.log-btn').on('click',function() {
        console.log('answers '+ answerArray);
        console.log('User answers '+ userInput);
@@ -18,6 +19,7 @@ $(document).ready(function(){
 
      function gameOn() {
        count = 0;
+
        $('.box').removeClass('flash');
        var interval = setInterval(function() {
           var randoNum = Math.floor(Math.random()*(0,3)+0);
@@ -46,6 +48,7 @@ $(document).ready(function(){
        });
 //2 inputs() triggers, get class name, check with answerArray, continue with game.
      function reset() {
+       
        count = 0;
        flag = false;
        userInput.splice(0,userInput.length);
@@ -84,6 +87,9 @@ $(document).ready(function(){
            gameOn();
            //increment number of flashes by one
            console.log("WINNER",level);
+           score+=level;
+           console.log(score);
+           $('#score').html(score);
            //initiate button
          }
      }
