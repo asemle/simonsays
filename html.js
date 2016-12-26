@@ -22,7 +22,7 @@ $(document).ready(function(){
 
        $('.box').removeClass('flash');
        var interval = setInterval(function() {
-          var randoNum = Math.floor(Math.random()*(0,3)+0);
+          var randoNum = Math.floor(Math.random()*(4)+0);
           var randomColor = colors[randoNum];
           answerArray.push(randomColor);
            var selected = $('.' + randomColor);
