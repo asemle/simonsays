@@ -150,15 +150,23 @@ body {
 
 button{
   background-color: #222021;
-  color: goldenrod;
+  color: white;
   border: 10px;
   border-color: #222021;
   border-style: outset;
   font-size: 18px;
   font-family: monospace, sans-serif;
   font-weight: bold;
+  margin-right: 20px;
+  outline: none;
   /*height: 39px;*/
   /*overflow: hidden;*/
+}
+
+button:active {
+  border-style: inset;
+  color: #02B92D;
+
 }
 .box{width: 241px;
     height: 241px;
