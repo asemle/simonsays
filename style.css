@@ -1,30 +1,160 @@
-.canvas{background-color: white;
+body {
+  background: url("http://myconcretemakeover.com/wp-content/uploads/2010/07/DSCF3012.jpg") no-repeat center center;
+  background-size: cover;
+  text-align: center;
+}
+
+.canvas{background-color: #222021;
+        position: relative;
         width: 500px;
-        height:500px;}
-.red{background-color: red;
-    border-radius: 250px 0px 0px 0px
-
+        height:500px;
+        padding: 25px;
+        margin: auto;
+        /*border: 25px solid black;*/
+        border-radius: 100%;
+        box-shadow: 14px 12px 9px 1px rgba(0, 0, 0, 0.2);
+        margin-bottom: 15px;
     }
-.blue{background-color: blue;
-      border-radius: 0px 0px 0px 250px;
-
+.red{background-color: #D90012;
+    border-radius: 241px 0px 0px 0px;
+    margin-bottom: 9px;
+    margin-right: 9px;
+    box-shadow:-3px -3px 0px 3px #AE000E;
+/* onlight up {box-shadow:-18px -18px 35px -18px red, -3px -3px 0px 3px #FF0113, background-color: #FF0113, #E6011E*/
     }
-.green{background-color: green;
-       border-radius: 0px 250px 0px 0px;
+.blue{background-color: #04419E;
+      border-radius: 0px 0px 0px 241px;
+      margin-top: 9px;
+      margin-right: 9px;
+      box-shadow: -3px 3px 0px 3px #03347E;
+      /* onlight up {box-shadow:-18px 18px 35px -18px blue, -3px 3px 0px 3px #0066CB, background-color: #0066CB, #E6011E*/
+    }
+.green{background-color: #01983B;
+       border-radius: 0px 241px 0px 0px;
+        margin-left: 9px;
+        margin-bottom: 9px;
+        box-shadow: 3px -3px 0px 3px #017A2F;
+        /* onlight up {box-shadow:-18px 18px 35px -18px green, -6px -6px 0px -3px #FF0113, background-color: #00CA5C, #E6011E*/
 
      }
-.yellow{background-color: yellow;
-        border-radius: 0px 0px 250px 0px;
+.yellow{background-color: #C78D00;
+        border-radius: 0px 0px 241px 0px;
+        margin-left: 9px;
+        margin-top: 9px;
+        box-shadow: 3px 3px 0px 3px #9F7100;
+        /* onlight up {box-shadow:-18px 18px 35px -18px yellow, -6px -6px 0px -3px #FF0113, background-color: #F3C500, #E6011E*/
       }
-.black{background-color: black;
 
+.redLight {background-color: #FF0113;
+  box-shadow:-3px -4px 100px 10px red, -3px -3px 0px 3px #FF0113;
 }
+.blueLight {background-color: #0066CB;
+  box-shadow: -3px 3px 0px 3px #0066CB, -3px 4px 100px 10px blue;
+}
+.greenLight {background-color: #00CA5C;
+  box-shadow: 3px -3px 0px 3px #00CA5C, 3px -4px 100px 10px green;
+}
+.yellowLight {background-color: #F3C500;
+  box-shadow: 3px 4px 100px 10px yellow, 3px 3px 0px 3px #F3C500;
+}
+
+.simonCircle {
+  position: absolute;
+  left: 155px;
+  top: 155px;
+  height: 240px;
+  width: 240px;
+  border-radius: 100%;
+  background-color: #222021;
+}
+
+.upperCircle {
+  height: 110px;
+  width: 216px;
+  margin: 18px auto;
+  background: url("Screen Shot 2016-12-26 at 12.13.20 AM.png");
+  border-top-left-radius: 1000px;
+  border-top-right-radius: 1000px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  text-align: center;
+}
+
+.upperCircle span {
+  position: absolute;
+  top: 50px;
+  left: 30px;
+  color: white;
+  height: 70px;
+  font-size: 70px;
+  font-family: "pricedown", sans-serif;
+  overflow: hidden;
+}
+
+.bottomCircle {
+  height:36px;/*text-align: center;*/
+  position: relative;
+  margin-top: -8px;
+}
+.scoreBox {
+  position: absolute;
+  top: 0;
+  left: 70px;
+  height: 26px!important;
+  width: 30px!important;
+  background-color: #4B4F38;
+  border-radius: 2px;
+  border-top: 8px solid #1D1A11;
+  border-left: 4px solid #2E3120;
+  border-right: 2px solid #3C3C40;
+  border-bottom: 2px solid #3C3C40;
+  text-align: center;
+}
+#score {
+  font-family: monospace;
+  text-align: center;
+  font-size: 20px;
+  /*line-height: 24px!important;*/
+}
+
+.power {
+  position: absolute;
+  right: 70px;
+  border-radius: 100%;
+  height: 24px;
+  width: 24px;
+  background-color: #02B92D;
+  align-self: center;
+  display: inline-block;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  border-style: inset;
+  border-color: #222021;
+}
+@font-face {
+  font-family: "pricedown";
+  src: url(pricedown.ttf);
+}
+/*<div class="simonCircle">
+  <div class="upperCircle">
+  </div>
+  <div class="bottomCircle">
+    <div class="scoreBox">
+      <span id="score"> </span>
+    </div>
+    <div class="power">
+
+    </div>
+  </div>
+</div>*/
+
 button{}
-.box{width: 250px;
-    height: 250px;
+.box{width: 241px;
+    height: 241px;
     float: left;
 
   }
-.flash{background-color: grey;
 
+.flash{background-color: black;
+ box-shadow: none;
 }

@@ -26,10 +26,10 @@ $(document).ready(function(){
           var randomColor = colors[randoNum];
           answerArray.push(randomColor);
            var selected = $('.' + randomColor);
-           selected.addClass('black');
+           selected.addClass(randomColor + 'Light');
            setTimeout(function() {
              console.log(count,flag);
-               selected.removeClass('black');
+               selected.removeClass(randomColor + 'Light');
            }, 500);
            //end interval sets flag equal true for inputs
            if(count >= level){
@@ -48,18 +48,20 @@ $(document).ready(function(){
        });
 //2 inputs() triggers, get class name, check with answerArray, continue with game.
      function reset() {
-       
+
        count = 0;
        flag = false;
        userInput.splice(0,userInput.length);
        answerArray.splice(0,answerArray.length);
      }
      function inputs(that) {
+        var clicked = $(that).attr('class').split(" ")[1];
+        console.log(clicked)
 
-       $(that).addClass('black');
+       $(that).addClass(clicked +'Light');
 
          setTimeout(function() {
-             $(that).removeClass('black');
+             $(that).removeClass(clicked +'Light');
          }, 200);
 
         var userID = that['0'].className;
