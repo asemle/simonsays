@@ -1,5 +1,5 @@
 body {
-  background: url("http://myconcretemakeover.com/wp-content/uploads/2010/07/DSCF3012.jpg") no-repeat center center;
+  background: url("http://myconcretemakeover.com/wp-content/uploads/2010/07/DSCF3012.jpg") repeat center center;
   background-size: cover;
   text-align: center;
 }
@@ -72,7 +72,7 @@ body {
   height: 110px;
   width: 216px;
   margin: 18px auto;
-  background: url("Screen Shot 2016-12-26 at 12.13.20 AM.png");
+  background: url("media/Screen Shot 2016-12-26 at 12.13.20 AM.png");
   border-top-left-radius: 1000px;
   border-top-right-radius: 1000px;
   border-bottom-left-radius: 100px;
@@ -133,7 +133,7 @@ body {
 }
 @font-face {
   font-family: "pricedown";
-  src: url(pricedown.ttf);
+  src: url(media/pricedown.ttf);
 }
 /*<div class="simonCircle">
   <div class="upperCircle">
@@ -155,6 +155,6 @@ button{}
 
   }
 
-.flash{background-color: black;
- box-shadow: none;
+.flash{background-color: purple;
+ box-shadow: 3px 4px 100px 10px purple;
 }
