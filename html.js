@@ -27,7 +27,9 @@ $(document).ready(function(){
      function gameOn() {
        count = 0;
 
-       $('.box').removeClass('flash');
+       var $box = $('.box')
+
+       $box.removeClass('flash');
        var interval = setInterval(function() {
           var randoNum = Math.floor(Math.random()*(4)+0);
           var randomColor = colors[randoNum];
@@ -51,7 +53,7 @@ $(document).ready(function(){
      }
 
      // if(flag) {
-       $(".box").click(function(){
+       $box.click(function(){
            if(flag){
              inputs($(this));
            }
